@@ -1,7 +1,11 @@
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
 import Link from "next/link";
 import React from "react";
+import Logout from "./Logout";
 
-export default function Navbar() {
+export default async function Navbar() {
+  const session = await getServerSession(authOptions);
   const navMenu = () => {
     return (
       <>
@@ -10,18 +14,18 @@ export default function Navbar() {
         </li>
 
         <li>
-          <Link href={"/product-list"}>Product List</Link>
+          <Link href="/products">Product List</Link>
         </li>
         <li>
-          <Link href={"/add-product"}>Add Product</Link>
+          <Link href="/dashboard/add-product">Add Product</Link>
         </li>
       </>
     );
   };
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
-        <div className="container mx-auto ">
+      <div className="navbar top-0 fixed z-50 bg-base-100 border-b border-b-gray-400 ">
+        <div className="flex container mx-auto ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -52,15 +56,21 @@ export default function Navbar() {
                 {navMenu()}
               </ul>
             </div>
-            <Link href={"/"} className="btn btn-ghost text-xl">
-              daisyUI
+            <Link href={"/"} className="text-2xl font-bold   ">
+              BookNest
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navMenu()}</ul>
           </div>
           <div className="navbar-end">
-            <a className="btn">Button</a>
+            {session?.user ? (
+              <Logout />
+            ) : (
+              <Link href="/login" className="btn">
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </div>

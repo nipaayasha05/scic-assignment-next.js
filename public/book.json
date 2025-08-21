@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship that teaches clean coding practices.",
+    "price": 30,
+    "publisher": "Prentice Hall",
+    "year": 2008,
+    "isbn": "978-0132350884",
+    "category": "Software"
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "description": "A guide to programming best practices with timeless principles for software developers.",
+    "price": 35,
+    "publisher": "Addison-Wesley",
+    "year": 1999,
+    "isbn": "978-0201616224",
+    "category": "Software"
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "Practical strategies for building good habits, breaking bad ones, and mastering small behaviors for success.",
+    "price": 20,
+    "publisher": "Penguin Random House",
+    "year": 2018,
+    "isbn": "978-0735211292",
+    "category": "Self-help"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian social science fiction novel exploring surveillance, freedom, and totalitarianism.",
+    "price": 15,
+    "publisher": "Secker & Warburg",
+    "year": 1949,
+    "isbn": "978-0451524935",
+    "category": "Fiction"
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "description": "An exploration of human history, evolution, and culture from the Stone Age to modern civilization.",
+    "price": 25,
+    "publisher": "Harper",
+    "year": 2011,
+    "isbn": "978-0062316097",
+    "category": "History"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A novel about racial injustice and moral growth in the American South.",
+    "price": 18,
+    "publisher": "J.B. Lippincott & Co.",
+    "year": 1960,
+    "isbn": "978-0446310789",
+    "category": "Fiction"
+  },
+  {
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "A science classic exploring cosmology, black holes, and the nature of the universe.",
+    "price": 22,
+    "publisher": "Bantam Books",
+    "year": 1988,
+    "isbn": "978-0553380163",
+    "category": "Science"
+  },
+  {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "description": "Rules and practices for focused success in a distracted world.",
+    "price": 19,
+    "publisher": "Grand Central Publishing",
+    "year": 2016,
+    "isbn": "978-1455586691",
+    "category": "Self-help"
+  }
+]
