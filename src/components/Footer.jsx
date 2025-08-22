@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -6,6 +8,12 @@ export default function Footer() {
       {" "}
       <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
         <aside>
+          <div className="flex gap-2 justify-center items-center">
+            <Image src="/asests/books.png" width={40} height={40} alt="books" />
+            <Link href={"/"} className="text-2xl font-bold   ">
+              BookNest
+            </Link>
+          </div>
           <p>
             ACME Industries Ltd.
             <br />
