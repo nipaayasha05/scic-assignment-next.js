@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           {" "}
           <Toaster />
           <Navbar />
-          {children}
+          <div className="min-h-[calc(100vh-288px)]">{children}</div>
           <Footer />
         </body>
       </NextSessionProvider>

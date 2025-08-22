@@ -18,7 +18,7 @@ export default function LoginPage() {
     }
   }, [session?.status]);
   return (
-    <div className="mt-16">
+    <div className="mt-16 ">
       <p className="text-3xl text-center font-bold py-5">Login</p>{" "}
       <div className="text-center">
         <button

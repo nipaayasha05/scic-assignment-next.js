@@ -6,7 +6,7 @@ import React from "react";
 export default async function ProductList() {
   //   const res = await fetch("/book.json");
   const booksCollection = dbConnect(collectionNameObj.booksCollection);
-  const data = await booksCollection.find({}).toArray();
+  const data = await booksCollection.find({}).limit(8).toArray();
 
   return (
     <div className="container mx-auto py-5">
@@ -31,15 +31,17 @@ export default async function ProductList() {
                   )}
                 </figure>
                 <div className="card-body bg-gray-50">
-                  <h2 className="card-title">{item.title}</h2>
-                  <p>{item.description}</p>
+                  <h2 className="card-title line-clamp-1">{item.title}</h2>
+                  <p className="line-clamp-2">{item.description}</p>
                   <p>
                     <strong>Price</strong>
                     {item.price}$
                   </p>
                   <div className="card-actions justify-end">
                     <Link href={`/products/${item._id}`}>
-                      <button className="btn btn-primary">View Details</button>
+                      <button className="btn bg-black text-white">
+                        View Details
+                      </button>
                     </Link>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import Link from "next/link";
 import React from "react";
 import Logout from "./Logout";
+import Image from "next/image";
 
 export default async function Navbar() {
   const session = await getServerSession(authOptions);
@@ -56,9 +57,17 @@ export default async function Navbar() {
                 {navMenu()}
               </ul>
             </div>
-            <Link href={"/"} className="text-2xl font-bold   ">
-              BookNest
-            </Link>
+            <div className="flex gap-2 justify-center items-center">
+              <Image
+                src="/asests/books.png"
+                width={40}
+                height={40}
+                alt="books"
+              />
+              <Link href={"/"} className="text-2xl font-bold   ">
+                BookNest
+              </Link>
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navMenu()}</ul>
@@ -67,7 +76,7 @@ export default async function Navbar() {
             {session?.user ? (
               <Logout />
             ) : (
-              <Link href="/login" className="btn">
+              <Link href="/login" className="btn bg-black text-white">
                 Login
               </Link>
             )}

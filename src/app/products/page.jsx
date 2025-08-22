@@ -21,21 +21,23 @@ export default async function ProductsListPage() {
                       width={350}
                       height={200}
                       className="    object-cover"
-                      alt={item.title}
+                      alt={item.title || "Book Image"}
                       unoptimized
                     />
                   )}
                 </figure>
                 <div className="card-body bg-gray-50">
-                  <h2 className="card-title">{item.title}</h2>
-                  <p>{item.description}</p>
+                  <h2 className="card-title line-clamp-1">{item.title}</h2>
+                  <p className="line-clamp-2">{item.description}</p>
                   <p>
                     <strong>Price</strong>
                     {item.price}$
                   </p>
                   <div className="card-actions justify-end">
                     <Link href={`/products/${item._id}`}>
-                      <button className="btn btn-primary">View Details</button>
+                      <button className="btn bg-black text-white">
+                        View Details
+                      </button>
                     </Link>
                   </div>
                 </div>

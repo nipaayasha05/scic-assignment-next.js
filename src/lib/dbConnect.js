@@ -17,3 +17,9 @@ export default function dbConnect(collectionName) {
   });
   return client.db(process.env.NEXT_PUBLIC_DB_NAME).collection(collectionName);
 }
+
+// export const POST = async (req) => {
+//   const body = await req.json();
+//   console.log(body);
+//   return body;
+// };
