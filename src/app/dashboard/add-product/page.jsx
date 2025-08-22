@@ -11,10 +11,13 @@ export default function AddProductPage() {
     const formData = new FormData(form);
     const addProduct = Object.fromEntries(formData);
     // console.log(addProduct);
-    const res = await fetch("http://localhost:3000/api/products", {
-      method: "POST",
-      body: JSON.stringify(addProduct),
-    });
+    const res = await fetch(
+      "https://scic-assignment-three.vercel.app/api/products",
+      {
+        method: "POST",
+        body: JSON.stringify(addProduct),
+      }
+    );
     const response = await res.json();
     // console.log(response);
     toast.success("product added successfully");
